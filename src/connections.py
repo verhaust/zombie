@@ -6,6 +6,40 @@ from twisted.internet import task
 from twisted.internet.protocol import Protocol
 import string
 
+class Commands (object):
+
+	def __init__(self):
+		self.channels = []
+		self.emotes = []
+		self.skills = []
+		self.
+class NPC(object):
+
+	def __init__(self):
+		self.NPCID = None
+		self.name = None
+		self.location = None
+		self.classes = []
+		self.skills = []
+		self.spells = []
+		self.stats = None
+		self.equipment = {}
+		self.inventory = {}
+
+	def importNPC(self,npcID)
+		
+class Player(NPC):
+
+	def __init__(self):
+		self.playerID = None
+		self.toggles = {}
+		
+class Globals(object):
+
+	def __init__(self):
+		self.allPlayers = None
+		self.connectedPlayers = []
+
 playerList = []
 
 def sanitize(line):
