@@ -6,7 +6,6 @@ from twisted.internet import task
 from twisted.internet.protocol import Protocol
 import string
 
-#TODO: Switch to async
 
 class Commands (object):
 
