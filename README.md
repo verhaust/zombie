@@ -3,6 +3,6 @@ zombie
 
 oh boy here we go
 =======
-My mud version
+version
 =======
 A mud of python sort
