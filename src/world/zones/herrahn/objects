@@ -1,0 +1,36 @@
+{
+    '0':
+        {
+            'base': 'npc',
+            'short_name': 'Billy Bob',
+            'long_name': 'Billy Bob stands idly',
+            'description': 'Big fat and ugly'
+        },
+
+    '1':
+        {
+            'base': 'npc',
+            'short_name': 'Silly Bob',
+            'long_name': 'Silly Bob stands idly',
+            'description': 'Tilted fat and ugly'
+        },
+    
+    '2':
+        {
+            'base': 'item',
+            'short_name': 'Ring of Canneries',
+            'long_name': 'A ring representing a Cannery sits here',
+            'description': 'Huge tight and ugly'
+            'equippable_slots': ['ring1','ring2']
+        },
+
+    '3':
+        {
+            'base': 'item',
+            'short_name': 'Hair of ornery',
+            'long_name': 'Ornery hairs flutter here',
+            'description': 'These hairs be ornery'
+            'equippable_slots': ['head']
+        }
+    
+}

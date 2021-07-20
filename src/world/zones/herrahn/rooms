@@ -1,0 +1,26 @@
+{ 
+    '0':
+        {
+            'name': 'Central Square',
+            'description': 'This is central Square',
+            'exits': [
+                ['N', ('hrn', '1')],
+                ['S', ('hrn', '2')],
+                ['E', ('hrn', '3')]
+                ]
+        
+        },
+
+    '1':
+        {
+            'name': 'Northern Square',
+            'description': 'This is northern Square',
+            'exits': [
+                ['N', ('hrn', '4')],
+                ['S', ('hrn', '0')],
+                ['E', ('hrn', '5')]
+                ]
+        
+        }
+
+}

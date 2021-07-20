@@ -1,0 +1,107 @@
+{
+    'id': 'hrn',
+    'rooms':
+        { 
+            '0':
+                {
+                    'name': 'Central Square',
+                    'description': 'This is central Square',
+                    'exits': [
+                        ['N', ('hrn', '1')],
+                        ['S', ('hrn', '2')],
+                        ['E', ('hrn', '3')]
+                        ]
+                
+                },
+
+            '1':
+                {
+                    'name': 'Northern Square',
+                    'description': 'This is northern Square',
+                    'exits': [
+                        ['N', ('hrn', '4')],
+                        ['S', ('hrn', '0')],
+                        ['E', ('hrn', '5')]
+                        ]
+                
+                }
+
+        }
+    
+    'npcs':
+        {
+            '0':
+                {
+                    'short_name': 'Billy Bob',
+                    'long_name': 'Billy Bob stands idly',
+                    'description': 'Big fat and ugly'
+                }
+
+            '1':
+                {
+                    'short_name': 'Silly Bob',
+                    'long_name': 'Silly Bob stands idly',
+                    'description': 'Tilted fat and ugly'
+                }
+            
+        }
+
+    'items':
+        {
+            '0':
+                {
+                    'short_name': 'Ring of Canneries',
+                    'long_name': 'A ring representing a Cannery sits here',
+                    'description': 'Huge tight and ugly'
+                    'equip_slots': ['ring1','ring2']
+                }
+
+            '1':
+                {
+                    'short_name': 'Hair of ornery',
+                    'long_name': 'Ornery hairs flutter here',
+                    'description': 'These hairs be ornery'
+                    'equip_slots': ['head']
+                }
+            
+        }
+
+    'loadable_npcs':
+        {
+            '0':
+                {
+                    'id': '0',
+                    'room': '0',
+                    'items': [
+                        ['0', ['ring1', 'ring2'], 100],
+                        ['1', ['head'], 50]
+                    ]
+                }
+
+            '2':
+                {
+                    'id': '1',
+                    'room': '1',
+                    'items': [
+                        ['0', ['ring1', 'ring2'], 50],
+                        ['1', ['head'], 100]
+                    ]
+                }
+            
+        }
+    'loadable_items':
+        {
+            '0':
+                {
+                    'item': '1000',
+                    'room': '1000',
+                }
+
+            '1':
+                {
+                    'item': '1000',
+                    'room': '1000',
+                }
+            
+        }
+}

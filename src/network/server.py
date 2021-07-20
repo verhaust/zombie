@@ -1,24 +1,28 @@
 import asyncio
+import json
+import glob
 import time
 
-class Player(object):
+tick_interval = 1
+shutdown_flag = False
 
-    def __init__(self, connection_info):
-        self.host = connection_info[0]
-        self.port = connection_info[1]
-        self.name = ""
-        self.history = []
-        self.state = 0
-        self.commands_to_process = []
-
-    def process_commands(self):
-        for command in self.commands_to_process:
-            print(time.time())
-            print(command)
-        
 def intro_message():
     intro = "Welcome to ZombieMUD\n"
     return intro
+
+async def game_loop():
+    global tick_interval
+    global shutdown_flag
+    tasks = []
+    while True:
+        #tasks.append(asyncio.create_task(my_expensive_operation()))
+        print("tick")
+        await asyncio.sleep(tick_interval)
+        if shutdown_flag:
+            print("Shutting down")
+            break
+
+    #await asyncio.gather(*tasks)
 
 class Connection(asyncio.Protocol):
 
@@ -63,10 +67,12 @@ class EchoServerClientProtocol(asyncio.Protocol):
         self.transport.close()
 
 loop = asyncio.get_event_loop()
+world_state = state.load_all()
 # Each client connection will create a new protocol instance
 #coro = loop.create_server(EchoServerClientProtocol, '127.0.0.1', 8888)
 coro = loop.create_server(Connection, '127.0.0.1', 8888)
 server = loop.run_until_complete(coro)
+loop.create_task(game_loop())
 
 # Serve requests until Ctrl+C is pressed
 print('Serving on {}'.format(server.sockets[0].getsockname()))
